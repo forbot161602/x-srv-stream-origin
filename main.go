@@ -7,6 +7,7 @@ import (
 
 	_ "github.com/forbot161602/pbc-stream-origin/source/entry/preset"
 	"github.com/forbot161602/pbc-stream-origin/source/entry/run_script"
+	"github.com/forbot161602/pbc-stream-origin/source/entry/run_server"
 	"github.com/forbot161602/pbc-stream-origin/source/entry/show_info"
 )
 
@@ -36,6 +37,15 @@ func init() {
 				ArgsUsage: "[arguments...]",
 				Action: func(c *cli.Context) error {
 					return run_script.Execute()
+				},
+			},
+			&cli.Command{
+				Name:      "run-server",
+				Usage:     "Launch a server",
+				HelpName:  "run-server",
+				ArgsUsage: "[arguments...]",
+				Action: func(c *cli.Context) error {
+					return run_server.Execute()
 				},
 			},
 			&cli.Command{
