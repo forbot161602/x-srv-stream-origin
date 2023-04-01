@@ -3,7 +3,7 @@ module github.com/forbot161602/pbc-stream-origin
 go 1.20
 
 require (
-	github.com/forbot161602/pbc-golang-lib v0.0.0-20230331063742-ac492d32eb27
+	github.com/forbot161602/pbc-golang-lib v0.0.0-20230401003653-3b2063018ef6
 	github.com/joho/godotenv v1.5.1
 	github.com/urfave/cli/v2 v2.25.1
 )

@@ -85,8 +85,8 @@ func GetServiceDeveloping() bool {
 
 type Config struct {
 	precfg.Config
-	ServiceCode string `env:"SRV_CODE" envDefault:"S002"`
-	ServiceName string `env:"SRV_NAME" envDefault:"stream-origin"`
+	ServiceCode string `json:"serviceCode" env:"SRV_CODE" envDefault:"S002"`
+	ServiceName string `json:"serviceName" env:"SRV_NAME" envDefault:"stream-origin"`
 }
 
 func (config *Config) GetServiceCode() string {
