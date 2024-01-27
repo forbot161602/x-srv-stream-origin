@@ -1,8 +1,8 @@
 package view
 
 import (
-	"github.com/forbot161602/pbc-stream-origin/source/core/base/config"
-	"github.com/forbot161602/pbc-stream-origin/source/core/base/mtmsg"
+	"github.com/forbot161602/x-srv-stream-origin/source/core/base/config"
+	"github.com/forbot161602/x-srv-stream-origin/source/core/base/mtmsg"
 )
 
 var ViewInternalInfoHandlers = []Handler{

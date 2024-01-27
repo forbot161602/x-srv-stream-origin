@@ -1,13 +1,14 @@
 package view
 
 import (
-	"github.com/forbot161602/pbc-golang-lib/source/module/gbgin"
+	"github.com/forbot161602/x-lib-go/source/module/xbgin"
 )
 
 type (
-	Handler  = gbgin.Handler
-	Context  = gbgin.Context
-	KongFlow = gbgin.KongFlow
+	Flow     = xbgin.Flow
+	KongFlow = xbgin.KongFlow
+	Handler  = xbgin.Handler
+	Context  = xbgin.Context
 )
 
 func InternalRequestHandler(ctx *Context) {

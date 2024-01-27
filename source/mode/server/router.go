@@ -3,19 +3,19 @@ package server
 import (
 	"net/http"
 
-	"github.com/forbot161602/pbc-golang-lib/source/module/gbgin"
+	"github.com/forbot161602/x-lib-go/source/module/xbgin"
 
-	"github.com/forbot161602/pbc-stream-origin/source/mode/server/view"
+	"github.com/forbot161602/x-srv-stream-origin/source/mode/server/view"
 )
 
-func GetRouter() *gbgin.Router {
+func GetRouter() *xbgin.Router {
 	if mRouter == nil {
 		mRouter = newRouter()
 	}
 	return mRouter
 }
 
-func newRouter() *gbgin.Router {
+func newRouter() *xbgin.Router {
 	router := (&routerBuilder{}).
 		initialize().
 		setMiddlewares().
@@ -24,29 +24,27 @@ func newRouter() *gbgin.Router {
 	return router
 }
 
-var mRouter *gbgin.Router
+var mRouter *xbgin.Router
 
-var routerStems = []gbgin.RouterStem{
+var routerStems = []xbgin.RouterStem{
 	{
-		Path:     "internal/",
-		Handlers: nil,
-		Leaves: []gbgin.RouterLeaf{
+		Path: "_internal/",
+		Leaves: []xbgin.RouterLeaf{
 			{Method: http.MethodGet, Path: "info/", Handlers: view.ViewInternalInfoHandlers},
 		},
-		Stems: nil,
 	},
 }
 
 type routerBuilder struct {
-	router *gbgin.Router
+	router *xbgin.Router
 }
 
-func (builder *routerBuilder) build() *gbgin.Router {
+func (builder *routerBuilder) build() *xbgin.Router {
 	return builder.router
 }
 
 func (builder *routerBuilder) initialize() *routerBuilder {
-	builder.router = gbgin.NewRouter()
+	builder.router = xbgin.NewRouter()
 	return builder
 }
 

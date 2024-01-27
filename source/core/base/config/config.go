@@ -1,7 +1,7 @@
 package config
 
 import (
-	"github.com/forbot161602/pbc-golang-lib/source/entry/precfg"
+	"github.com/forbot161602/x-lib-go/source/entry/precfg"
 )
 
 var mConfig *Config
@@ -83,10 +83,17 @@ func GetServiceDeveloping() bool {
 	return GetConfig().GetServiceDeveloping()
 }
 
+// Service definition
+
+func GetStreamDirectoryPath() string {
+	return GetConfig().GetStreamDirectoryPath()
+}
+
 type Config struct {
 	precfg.Config
-	ServiceCode string `json:"serviceCode" env:"SRV_CODE" envDefault:"S002"`
-	ServiceName string `json:"serviceName" env:"SRV_NAME" envDefault:"stream-origin"`
+	ServiceCode         string `json:"serviceCode" env:"SRV_CODE" envDefault:"S002"`
+	ServiceName         string `json:"serviceName" env:"SRV_NAME" envDefault:"stream-origin"`
+	StreamDirectoryPath string `json:"streamDirectoryPath" env:"STREAM_DIRECTORY_PATH,notEmpty"`
 }
 
 func (config *Config) GetServiceCode() string {
@@ -95,6 +102,10 @@ func (config *Config) GetServiceCode() string {
 
 func (config *Config) GetServiceName() string {
 	return config.ServiceName
+}
+
+func (config *Config) GetStreamDirectoryPath() string {
+	return config.StreamDirectoryPath
 }
 
 type builder struct {

@@ -3,3 +3,6 @@
 .env
 .DS_Store
 main.exe
+
+static/*
+!static/.gitkeep

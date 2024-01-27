@@ -1,13 +1,13 @@
 package show_info
 
 import (
-	"github.com/forbot161602/pbc-golang-lib/source/core/utility/gblogger"
+	"github.com/forbot161602/x-lib-go/source/core/utility/xblogger"
 
-	"github.com/forbot161602/pbc-stream-origin/source/core/base/config"
+	"github.com/forbot161602/x-srv-stream-origin/source/core/base/config"
 )
 
 func Execute() error {
-	gblogger.WithFields(gblogger.Fields{
+	xblogger.WithFields(xblogger.Fields{
 		"gitTag":    config.GetGitTag(),
 		"gitCommit": config.GetGitCommit(),
 	}).Info("Log info message.")

@@ -5,10 +5,10 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	_ "github.com/forbot161602/pbc-stream-origin/source/entry/preset"
-	"github.com/forbot161602/pbc-stream-origin/source/entry/run_script"
-	"github.com/forbot161602/pbc-stream-origin/source/entry/run_server"
-	"github.com/forbot161602/pbc-stream-origin/source/entry/show_info"
+	_ "github.com/forbot161602/x-srv-stream-origin/source/entry/preset"
+	"github.com/forbot161602/x-srv-stream-origin/source/entry/run_script"
+	"github.com/forbot161602/x-srv-stream-origin/source/entry/run_server"
+	"github.com/forbot161602/x-srv-stream-origin/source/entry/show_info"
 )
 
 var (
