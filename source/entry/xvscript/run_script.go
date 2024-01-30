@@ -1,4 +1,4 @@
-package run_script
+package xvscript
 
 func Execute() error {
 	return nil

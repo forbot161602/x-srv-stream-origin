@@ -1,4 +1,4 @@
-package mtmsg
+package xvmtmsg
 
 import (
 	"net/http"

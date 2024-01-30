@@ -1,12 +1,14 @@
-package server
+package xvsrv
 
 import (
 	"net/http"
 
 	"github.com/forbot161602/x-lib-go/source/module/xbgin"
 
-	"github.com/forbot161602/x-srv-stream-origin/source/mode/server/view"
+	"github.com/forbot161602/x-srv-stream-origin/source/mode/server/xvview"
 )
+
+var mRouter *xbgin.Router
 
 func GetRouter() *xbgin.Router {
 	if mRouter == nil {
@@ -24,13 +26,11 @@ func newRouter() *xbgin.Router {
 	return router
 }
 
-var mRouter *xbgin.Router
-
 var routerStems = []xbgin.RouterStem{
 	{
-		Path: "_internal/",
+		Path: "internal/",
 		Leaves: []xbgin.RouterLeaf{
-			{Method: http.MethodGet, Path: "info/", Handlers: view.ViewInternalInfoHandlers},
+			{Method: http.MethodGet, Path: "info/", Handlers: xvview.ViewInternalInfoHandlers},
 		},
 	},
 }
