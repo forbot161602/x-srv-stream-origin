@@ -3,7 +3,7 @@ module github.com/forbot161602/x-srv-stream-origin
 go 1.21
 
 require (
-	github.com/forbot161602/x-lib-go v0.0.0-20240130012959-ef785754655d
+	github.com/forbot161602/x-lib-go v0.0.0-20240202162628-388919d925a6
 	github.com/joho/godotenv v1.5.1
 	github.com/urfave/cli/v2 v2.27.1
 )
