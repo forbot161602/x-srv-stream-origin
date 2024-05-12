@@ -33,6 +33,12 @@ var routerStems = []xbgin.RouterStem{
 			{Method: http.MethodGet, Path: "info/", Handlers: xvview.ViewInternalInfoHandlers},
 		},
 	},
+	{
+		Path: "stream/:streamID/",
+		Leaves: []xbgin.RouterLeaf{
+			{Method: http.MethodGet, Path: "*pathNames", Handlers: xvview.ViewStreamFileHandlers},
+		},
+	},
 }
 
 type routerBuilder struct {
