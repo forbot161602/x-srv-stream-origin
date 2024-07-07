@@ -1,7 +1,7 @@
-package config
+package xvcfg
 
 import (
-	"github.com/forbot161602/x-lib-go/source/entry/precfg"
+	"github.com/forbot161602/x-lib-go/source/entry/xbprecfg"
 )
 
 var mConfig *Config
@@ -14,7 +14,7 @@ func GetConfig() *Config {
 }
 
 func newConfig() *Config {
-	config := (&builder{}).initialize().
+	config := (&configBuilder{}).initialize().
 		parseEnv().
 		setBasePath().
 		setServiceID().
@@ -90,9 +90,9 @@ func GetStreamDirectoryPath() string {
 }
 
 type Config struct {
-	precfg.Config
+	xbprecfg.Config
 	ServiceCode         string `json:"serviceCode" env:"SRV_CODE" envDefault:"S002"`
-	ServiceName         string `json:"serviceName" env:"SRV_NAME" envDefault:"stream-origin"`
+	ServiceName         string `json:"serviceName" env:"SRV_NAME" envDefault:"srv-stream-origin"`
 	StreamDirectoryPath string `json:"streamDirectoryPath" env:"STREAM_DIRECTORY_PATH,notEmpty"`
 }
 
@@ -108,35 +108,35 @@ func (config *Config) GetStreamDirectoryPath() string {
 	return config.StreamDirectoryPath
 }
 
-type builder struct {
+type configBuilder struct {
 	config *Config
 }
 
-func (builder *builder) build() *Config {
+func (builder *configBuilder) build() *Config {
 	return builder.config
 }
 
-func (builder *builder) initialize() *builder {
+func (builder *configBuilder) initialize() *configBuilder {
 	builder.config = &Config{}
 	return builder
 }
 
-func (builder *builder) parseEnv() *builder {
-	precfg.ParseEnv(builder.config)
+func (builder *configBuilder) parseEnv() *configBuilder {
+	xbprecfg.ParseEnv(builder.config)
 	return builder
 }
 
-func (builder *builder) setBasePath() *builder {
-	builder.config.BasePath = precfg.MakeBasePath(5)
+func (builder *configBuilder) setBasePath() *configBuilder {
+	builder.config.BasePath = xbprecfg.MakeBasePath(5)
 	return builder
 }
 
-func (builder *builder) setServiceID() *builder {
-	builder.config.ServiceID = precfg.MakeServiceID()
+func (builder *configBuilder) setServiceID() *configBuilder {
+	builder.config.ServiceID = xbprecfg.MakeServiceID()
 	return builder
 }
 
-func (builder *builder) setServiceDeveloping() *builder {
-	builder.config.ServiceDeveloping = precfg.MakeServiceDeveloping(builder.config.ServiceEnvironment)
+func (builder *configBuilder) setServiceDeveloping() *configBuilder {
+	builder.config.ServiceDeveloping = xbprecfg.MakeServiceDeveloping(builder.config.ServiceEnvironment)
 	return builder
 }

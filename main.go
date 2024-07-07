@@ -5,10 +5,10 @@ import (
 
 	"github.com/urfave/cli/v2"
 
-	_ "github.com/forbot161602/x-srv-stream-origin/source/entry/preset"
-	"github.com/forbot161602/x-srv-stream-origin/source/entry/run_script"
-	"github.com/forbot161602/x-srv-stream-origin/source/entry/run_server"
-	"github.com/forbot161602/x-srv-stream-origin/source/entry/show_info"
+	"github.com/forbot161602/x-srv-stream-origin/source/entry/xvinfo"
+	_ "github.com/forbot161602/x-srv-stream-origin/source/entry/xvpreset"
+	"github.com/forbot161602/x-srv-stream-origin/source/entry/xvscript"
+	"github.com/forbot161602/x-srv-stream-origin/source/entry/xvserver"
 )
 
 var (
@@ -17,13 +17,13 @@ var (
 
 func init() {
 	app = &cli.App{
-		Name:      "stream-origin",
-		Usage:     "Stream origin",
+		Name:      "srv-stream-origin",
+		Usage:     "Service: Stream origin",
 		Version:   "v1",
 		HelpName:  "./main.exe",
 		ArgsUsage: "[arguments...]",
 		Authors: []*cli.Author{
-			&cli.Author{Name: "forbot161602@gmail.com"},
+			&cli.Author{Name: "gordon.lai@starryck.com"},
 		},
 		Action: func(c *cli.Context) error {
 			cli.ShowAppHelp(c)
@@ -31,12 +31,21 @@ func init() {
 		},
 		Commands: []*cli.Command{
 			&cli.Command{
+				Name:      "show-info",
+				Usage:     "Present service information",
+				HelpName:  "show-info",
+				ArgsUsage: "[arguments...]",
+				Action: func(c *cli.Context) error {
+					return xvinfo.Execute()
+				},
+			},
+			&cli.Command{
 				Name:      "run-script",
 				Usage:     "Perform a script",
 				HelpName:  "run-script",
 				ArgsUsage: "[arguments...]",
 				Action: func(c *cli.Context) error {
-					return run_script.Execute()
+					return xvscript.Execute()
 				},
 			},
 			&cli.Command{
@@ -45,16 +54,7 @@ func init() {
 				HelpName:  "run-server",
 				ArgsUsage: "[arguments...]",
 				Action: func(c *cli.Context) error {
-					return run_server.Execute()
-				},
-			},
-			&cli.Command{
-				Name:      "show-info",
-				Usage:     "Present service information",
-				HelpName:  "show-info",
-				ArgsUsage: "[arguments...]",
-				Action: func(c *cli.Context) error {
-					return show_info.Execute()
+					return xvserver.Execute()
 				},
 			},
 		},

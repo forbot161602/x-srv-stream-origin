@@ -1,8 +1,8 @@
-package view
+package xvview
 
 import (
-	"github.com/forbot161602/x-srv-stream-origin/source/core/base/config"
-	"github.com/forbot161602/x-srv-stream-origin/source/core/base/mtmsg"
+	"github.com/forbot161602/x-srv-stream-origin/source/core/base/xvcfg"
+	"github.com/forbot161602/x-srv-stream-origin/source/core/base/xvmtmsg"
 )
 
 var ViewInternalInfoHandlers = []Handler{
@@ -25,7 +25,7 @@ func (flow *ViewInternalInfoHandlerFlow) SetResult() {
 		return
 	}
 
-	info := config.GetConfig()
-	flow.RespondJSON(mtmsg.IAV200, info, nil)
+	info := xvcfg.GetConfig()
+	flow.RespondJSON(xvmtmsg.IAV200, info, nil)
 	return
 }

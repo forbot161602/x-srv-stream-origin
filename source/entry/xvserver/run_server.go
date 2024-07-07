@@ -1,4 +1,4 @@
-package run_server
+package xvserver
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 
 	"github.com/forbot161602/x-lib-go/source/utility/xbspvs"
 
-	"github.com/forbot161602/x-srv-stream-origin/source/core/base/config"
-	"github.com/forbot161602/x-srv-stream-origin/source/mode/server"
+	"github.com/forbot161602/x-srv-stream-origin/source/core/base/xvcfg"
+	"github.com/forbot161602/x-srv-stream-origin/source/mode/server/xvsrv"
 )
 
 func Execute() error {
@@ -23,8 +23,8 @@ type ServerProcess struct {
 
 func (process *ServerProcess) Setup() error {
 	process.SetServer(&http.Server{
-		Addr:    fmt.Sprintf(":%d", config.GetServicePort()),
-		Handler: server.GetRouter().GetEngine(),
+		Addr:    fmt.Sprintf(":%d", xvcfg.GetServicePort()),
+		Handler: xvsrv.GetRouter().GetEngine(),
 	})
 	return nil
 }
