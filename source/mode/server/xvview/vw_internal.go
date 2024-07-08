@@ -17,7 +17,7 @@ func ViewInternalInfoHandler(ctx *Context) {
 }
 
 type ViewInternalInfoHandlerFlow struct {
-	KongFlow
+	APISIXFlow
 }
 
 func (flow *ViewInternalInfoHandlerFlow) SetResult() {

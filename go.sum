@@ -15,6 +15,8 @@ github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/forbot161602/x-lib-go v0.0.0-20240707154710-70497d9c9836 h1:Fs6Q9PR4vNUAyrgJSNU9JeJ31p9HL+Avb/dh/Czk+EQ=
 github.com/forbot161602/x-lib-go v0.0.0-20240707154710-70497d9c9836/go.mod h1:53Vm5WVMYVEuP6o2rCci31a0hjtp+Z13kIc5lr2B+sA=
+github.com/forbot161602/x-lib-go v0.0.0-20240708000239-bd81919de9d6 h1:vqsviPj+q5DlWnbvZoWYyUY1BN4VpoT+vjLsc5684pg=
+github.com/forbot161602/x-lib-go v0.0.0-20240708000239-bd81919de9d6/go.mod h1:53Vm5WVMYVEuP6o2rCci31a0hjtp+Z13kIc5lr2B+sA=
 github.com/gabriel-vasile/mimetype v1.4.3 h1:in2uUcidCuFcDKtdcBxlR0rJ1+fsokWf+uqxgUFjbI0=
 github.com/gabriel-vasile/mimetype v1.4.3/go.mod h1:d8uq/6HKRL6CGdk+aubisF/M5GcPfT7nKyLpA0lbSSk=
 github.com/gin-contrib/cors v1.7.2 h1:oLDHxdg8W/XDoN/8zamqk/Drgt4oVZDvaV0YmvVICQw=

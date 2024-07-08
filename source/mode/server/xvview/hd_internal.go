@@ -9,5 +9,5 @@ func InternalRequestHandler(ctx *Context) {
 }
 
 type InternalRequestHandlerFlow struct {
-	KongFlow
+	APISIXFlow
 }
