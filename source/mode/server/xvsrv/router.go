@@ -3,7 +3,7 @@ package xvsrv
 import (
 	"net/http"
 
-	"github.com/forbot161602/x-lib-go/source/module/xbgin"
+	"github.com/starryck/x-lib-go/source/module/xbgin"
 
 	"github.com/forbot161602/x-srv-stream-origin/source/mode/server/xvview"
 )

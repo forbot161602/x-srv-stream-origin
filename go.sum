@@ -13,10 +13,6 @@ github.com/cpuguy83/go-md2man/v2 v2.0.4/go.mod h1:tgQtvFlXSQOSOSIRvRPT7W67SCa46t
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
-github.com/forbot161602/x-lib-go v0.0.0-20240707154710-70497d9c9836 h1:Fs6Q9PR4vNUAyrgJSNU9JeJ31p9HL+Avb/dh/Czk+EQ=
-github.com/forbot161602/x-lib-go v0.0.0-20240707154710-70497d9c9836/go.mod h1:53Vm5WVMYVEuP6o2rCci31a0hjtp+Z13kIc5lr2B+sA=
-github.com/forbot161602/x-lib-go v0.0.0-20240708000239-bd81919de9d6 h1:vqsviPj+q5DlWnbvZoWYyUY1BN4VpoT+vjLsc5684pg=
-github.com/forbot161602/x-lib-go v0.0.0-20240708000239-bd81919de9d6/go.mod h1:53Vm5WVMYVEuP6o2rCci31a0hjtp+Z13kIc5lr2B+sA=
 github.com/gabriel-vasile/mimetype v1.4.3 h1:in2uUcidCuFcDKtdcBxlR0rJ1+fsokWf+uqxgUFjbI0=
 github.com/gabriel-vasile/mimetype v1.4.3/go.mod h1:d8uq/6HKRL6CGdk+aubisF/M5GcPfT7nKyLpA0lbSSk=
 github.com/gin-contrib/cors v1.7.2 h1:oLDHxdg8W/XDoN/8zamqk/Drgt4oVZDvaV0YmvVICQw=
@@ -75,6 +71,8 @@ github.com/segmentio/ksuid v1.0.4 h1:sBo2BdShXjmcugAMwjugoGUdUV0pcxY5mW4xKRn3v4c
 github.com/segmentio/ksuid v1.0.4/go.mod h1:/XUiZBD3kVx5SmUOl55voK5yeAbBNNIed+2O73XgrPE=
 github.com/sirupsen/logrus v1.9.3 h1:dueUQJ1C2q9oE3F7wvmSGAaVtTmUizReu6fjN8uqzbQ=
 github.com/sirupsen/logrus v1.9.3/go.mod h1:naHLuLoDiP4jHNo9R0sCBMtWGeIprob74mVsIT4qYEQ=
+github.com/starryck/x-lib-go v0.0.0-20240718031333-ca026858a745 h1:RDdNasLuOzMdbK86VVwcAanklPLIKfXCwkwUAor5xxM=
+github.com/starryck/x-lib-go v0.0.0-20240718031333-ca026858a745/go.mod h1:owkkklujOus1FP1fl2zonJeyej8CRGc9aTOkRpCX+CU=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
 github.com/stretchr/objx v0.4.0/go.mod h1:YvHI0jy2hoMjB+UWwv71VJQ9isScKT/TqJzVSSt89Yw=
 github.com/stretchr/objx v0.5.0/go.mod h1:Yh+to48EsGEfYuaHDzXPcE3xhTkx73EhmCGUpEOglKo=
