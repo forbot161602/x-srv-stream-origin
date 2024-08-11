@@ -1,7 +1,7 @@
 package xvview
 
 import (
-	"github.com/forbot161602/x-lib-go/source/module/xbgin"
+	"github.com/starryck/x-lib-go/source/module/xbgin"
 )
 
 type (
