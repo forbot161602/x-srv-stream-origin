@@ -5,7 +5,7 @@ import (
 
 	"github.com/joho/godotenv"
 
-	"github.com/forbot161602/x-lib-go/source/core/base/xbcfg"
+	"github.com/starryck/strk-tc-x-lib-go/source/core/base/xbcfg"
 
 	"github.com/forbot161602/x-srv-stream-origin/source/core/base/xvcfg"
 )

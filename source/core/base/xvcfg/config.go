@@ -1,7 +1,7 @@
 package xvcfg
 
 import (
-	"github.com/forbot161602/x-lib-go/source/entry/xbprecfg"
+	"github.com/starryck/strk-tc-x-lib-go/source/entry/xbprecfg"
 )
 
 var mConfig *Config

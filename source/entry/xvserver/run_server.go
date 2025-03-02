@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/forbot161602/x-lib-go/source/utility/xbspvs"
+	"github.com/starryck/strk-tc-x-lib-go/source/utility/xbspvs"
 
 	"github.com/forbot161602/x-srv-stream-origin/source/core/base/xvcfg"
 	"github.com/forbot161602/x-srv-stream-origin/source/mode/server/xvsrv"
